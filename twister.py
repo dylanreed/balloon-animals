@@ -139,7 +139,7 @@ outline_files = {
 }
 
 #Create a function to generate unique image combinations
-TOTAL_IMAGES = 12 # Number of random unique images we want to generate ( 2 x 2 x 2 = 8)
+TOTAL_IMAGES = 67 # Number of random unique images we want to generate ( 2 x 2 x 2 = 8)
 
 all_images = [] 
 
