@@ -8,146 +8,107 @@ import json
 # Each image is made up a series of traits
 # The weightings for each trait drive the rarity and add up to 100%
 
-backgrounds = ["Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine", "Ten", "Eleven", "Twelve", "Thirteen", "Fourteen", "Fifteen", "Sixteen", "Seventeen", "Eighteen", "Nineteen", "Twenty", "Twenty-one"] 
-background_weights = [5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5]
+backgroundc = ["None", "A little", "More", "A Lot", "Filled"] 
+backgroundc_weights = [10, 15, 20, 25, 30]
 
-body = ["Black", "Red", "Orange", "Yellow", "Green", "Blue", "Indigo", "Violet", "White"]
-body_weights = [11, 11, 11, 11, 11, 11, 11, 11, 12]
+backgroundm = ["None", "A little", "More", "A Lot", "Filled"] 
+backgroundm_weights = [30, 10, 15, 20, 25]
 
-back = ["Black", "Red", "Orange", "Yellow", "Green", "Blue", "Indigo", "Violet", "White"]
-back_weights = [11, 11, 11, 11, 11, 11, 11, 11, 12]
+backgroundy = ["None", "A little", "More", "A Lot", "Filled"] 
+backgroundy_weights = [25, 30, 10, 15, 20]
 
-ears = ["Black", "Red", "Orange", "Yellow", "Green", "Blue", "Indigo", "Violet", "White"]
-ears_weights = [11, 11, 11, 11, 11, 11, 11, 11, 12]
+bodyc = ["None", "A little", "More", "A Lot", "Filled"] 
+bodyc_weights = [20, 25, 30, 10, 15]
 
-front = ["Black", "Red", "Orange", "Yellow", "Green", "Blue", "Indigo", "Violet", "White"] 
-front_weights = [11, 11, 11, 11, 11, 11, 11, 11, 12]
+bodym = ["None", "A little", "More", "A Lot", "Filled"] 
+bodym_weights = [15, 20, 25, 30, 10]
 
-head = ["Black", "Red", "Orange", "Yellow", "Green", "Blue", "Indigo", "Violet", "White"] 
-head_weights = [11, 11, 11, 11, 11, 11, 11, 11, 12]
+bodyy = ["None", "A little", "More", "A Lot", "Filled"] 
+bodyy_weights = [10, 15, 20, 25, 30]
 
-neck = ["Black", "Red", "Orange", "Yellow", "Green", "Blue", "Indigo", "Violet", "White"] 
-neck_weights = [11, 11, 11, 11, 11, 11, 11, 11, 12]
+outlinec = ["None", "A little", "More", "A Lot", "Filled"] 
+outlinec_weights = [30, 10, 15, 20, 25]
 
-tail = ["Black", "Red", "Orange", "Yellow", "Green", "Blue", "Indigo", "Violet", "White"] 
-tail_weights = [11, 11, 11, 11, 11, 11, 11, 11, 12]
+outlinem = ["None", "A little", "More", "A Lot", "Filled"] 
+outlinem_weights = outlinec_weights = [25, 30, 10, 15, 20]
 
-outline = ["Black"] 
-outline_weights = [100]
+outliney = ["None", "A little", "More", "A Lot", "Filled"]  
+outliney_weights = outlinec_weights = [20, 25, 30, 10, 15]
 
 # Dictionary variable for each trait. 
 # Eech trait corresponds to its file name
 # Add more shapes and colours as you wish
 
-background_files = {
-    "Two": "bg2",
-    "Three": "bg3",
-    "Four": "bg4",
-    "Five": "bg5",
-    "Six": "bg6",
-    "Seven": "bg7",
-    "Eight": "bg8",
-    "Nine": "bg9",
-    "Ten": "bg10",
-    "Eleven": "bg11",
-    "Twelve": "bg12",
-    "Thirteen": "bg13",
-    "Fourteen": "bg14",
-    "Fifteen": "bg15",
-    "Sixteen": "bg16",
-    "Seventeen": "bg17",
-    "Eighteen": "bg18",
-    "Nineteen": "bg19",
-    "Twenty": "bg20",
-    "Twenty-one": "bg21"
+backgroundc_files = {
+    "None": "cbg1",
+    "A little": "cbg2",
+    "More": "cbg3",
+    "A Lot": "cbg4",
+    "Filled": "cbg5"
 }
 
-back_files = {
-    "Black": "back_legs_black",
-    "Red": "back_legs_red",
-    "Orange": "back_legs_orange",
-    "Yellow": "back_legs_yellow",
-    "Green": "back_legs_green",
-    "Blue": "back_legs_blue",
-    "Indigo": "back_legs_indigo",
-    "Violet": "back_legs_orange",
-    "White": "back_legs_white"  
+backgroundm_files = {
+    "None": "cbg1",
+    "A little": "cbg2",
+    "More": "cbg3",
+    "A Lot": "cbg4",
+    "Filled": "cbg5"
 }
 
-body_files = {
-    "Black": "body_black",
-    "Red": "body_red",
-    "Orange": "body_orange",
-    "Yellow": "body_yellow",
-    "Green": "body_green",
-    "Blue": "body_blue",
-    "Indigo": "body_indigo",
-    "Violet": "body_violet",
-    "White": "body_white"
+backgroundy_files = {
+    "None": "cbg1",
+    "A little": "cbg2",
+    "More": "cbg3",
+    "A Lot": "cbg4",
+    "Filled": "cbg5"
 }
 
-ears_files = {
-    "Black": "ears_black",
-    "Red": "ears_red",
-    "Orange": "ears_orange",
-    "Yellow": "ears_yellow",
-    "Green": "ears_green",
-    "Blue": "ears_blue",
-    "Indigo": "ears_indigo",
-    "Violet": "ears_violet",
-    "White": "ears_white"
+bodyc_files = {
+    "None": "cbg1",
+    "A little": "cbg2",
+    "More": "cbg3",
+    "A Lot": "cbg4",
+    "Filled": "cbg5"
 }
 
-front_files = {
-    "Black": "front_legs_black",
-    "Red": "front_legs_red",
-    "Orange": "front_legs_orange",
-    "Yellow": "front_legs_yellow",
-    "Green": "front_legs_green",
-    "Blue": "front_legs_blue",
-    "Indigo": "front_legs_indigo",
-    "Violet": "front_legs_violet",
-    "White": "front_legs_white"
+bodym_files = {
+    "None": "cbg1",
+    "A little": "cbg2",
+    "More": "cbg3",
+    "A Lot": "cbg4",
+    "Filled": "cbg5"
 }
 
-head_files = {
-    "Black": "head_black",
-    "Red": "head_red",
-    "Orange": "head_orange",
-    "Yellow": "head_yellow",
-    "Green": "head_green",
-    "Blue": "head_blue",
-    "Indigo": "head_indigo",
-    "Violet": "head_violet",
-    "White": "head_white"
+bodyy_files = {
+    "None": "cbg1",
+    "A little": "cbg2",
+    "More": "cbg3",
+    "A Lot": "cbg4",
+    "Filled": "cbg5"
 }
 
-neck_files = {
-    "Black": "neck_black",
-    "Red": "neck_red",
-    "Orange": "neck_orange",
-    "Yellow": "neck_yellow",
-    "Green": "neck_green",
-    "Blue": "neck_blue",
-    "Indigo": "neck_indigo",
-    "Violet": "neck_violet",
-    "White": "neck_white"
+outlinec_files = {
+    "None": "cbg1",
+    "A little": "cbg2",
+    "More": "cbg3",
+    "A Lot": "cbg4",
+    "Filled": "cbg5"
 }
 
-tail_files = {
-    "Black": "tail_black",
-    "Red": "tail_red",
-    "Orange": "tail_orange",
-    "Yellow": "tail_yellow",
-    "Green": "tail_green",
-    "Blue": "tail_blue",
-    "Indigo": "tail_indigo",
-    "Violet": "tail_violet",
-    "White": "tail_white"
+outlinem_files = {
+    "None": "cbg1",
+    "A little": "cbg2",
+    "More": "cbg3",
+    "A Lot": "cbg4",
+    "Filled": "cbg5"
 }
 
-outline_files = {
-    "Black": "outline",
+outliney_files = {
+    "None": "cbg1",
+    "A little": "cbg2",
+    "More": "cbg3",
+    "A Lot": "cbg4",
+    "Filled": "cbg5"
 }
 
 #Create a function to generate unique image combinations
@@ -160,15 +121,15 @@ def create_new_image():
     new_image = {} #
 
     # For each trait category, select a random trait based on the weightings 
-    new_image ["Background"] = random.choices(backgrounds, background_weights)[0]
-    new_image ["Back Legs"] = random.choices(back, back_weights)[0]
-    new_image ["Front Legs"] = random.choices(front, front_weights)[0]
-    new_image ["Body"] = random.choices(body, body_weights)[0]
-    new_image ["Ears"] = random.choices(ears, ears_weights)[0]
-    new_image ["Head"] = random.choices(head, head_weights)[0]
-    new_image ["Neck"] = random.choices(neck, neck_weights)[0]
-    new_image ["Tail"] = random.choices(tail, tail_weights)[0]
-    new_image ["Outline"] = random.choices(outline, outline_weights)[0]
+    new_image ["Cyan Background"] = random.choices(backgroundcs, backgroundc_weights)[0]
+    new_image ["Magenta Background"] = random.choices(backgroundm, backgroundm_weights)[0]
+    new_image ["Yellow Backgroun"] = random.choices(backgroundy, backgroundy_weights)[0]
+    new_image ["Cyan Body"] = random.choices(bodyc, bodyc_weights)[0]
+    new_image ["Magenta Body"] = random.choices(bodym, bodym_weights)[0]
+    new_image ["Yellow Body"] = random.choices(bodyy, bodyy_weights)[0]
+    new_image ["Cyan Outline"] = random.choices(outlinec, outlinec_weights)[0]
+    new_image ["Magenta Outline"] = random.choices(outlinem, outlinem_weights)[0]
+    new_image ["Yellow Outline"] = random.choices(outliney, outliney_weights)[0]
 
 
     if new_image in all_images:
@@ -205,63 +166,63 @@ print(all_images)
 
 #get trait count
 
-background_count = {}
-for item in backgrounds:
-    background_count[item] = 0
+backgroundc_count = {}
+for item in backgroundc:
+    backgroundc_count[item] = 0
 
-back_count = {}
-for item in back:
-    back_count[item] = 0
+backgroundm_count = {}
+for item in backgroundm:
+    backgroundm_count[item] = 0
 
-body_count = {}
-for item in body:
-    body_count[item] = 0
+backgroundy_count = {}
+for item in backgroundy:
+    backgroundy_count[item] = 0
 
-ears_count = {}
-for item in ears:
-    ears_count[item] = 0
+bodyc_count = {}
+for item in bodyc:
+    bodyc_count[item] = 0
 
-front_count = {}
-for item in front:
-    front_count[item] = 0
+bodym_count = {}
+for item in bodym:
+    bodym_count[item] = 0
 
-head_count = {}
-for item in head:
-    head_count[item] = 0
+bodyy_count = {}
+for item in bodyy:
+    bodyy_count[item] = 0
 
-neck_count = {}
-for item in neck:
-    neck_count[item] = 0
+outlinec_count = {}
+for item in outlinec:
+    outlinec_count[item] = 0
 
-tail_count = {}
-for item in tail:
-    tail_count[item] = 0
+outlinem_count = {}
+for item in outlinem:
+    outlinem_count[item] = 0
 
-outline_count = {}
-for item in outline:
-    outline_count[item] = 0
+outliney_count = {}
+for item in outliney:
+    outliney_count[item] = 0
 
 for image in all_images:
-    background_count[image["Background"]] += 1
-    back_count[image["Back Legs"]] += 1
-    body_count[image["Body"]] += 1
-    ears_count[image["Ears"]] += 1
-    front_count[image["Front Legs"]] += 1
-    head_count[image["Head"]] += 1
-    neck_count[image["Neck"]] += 1
-    outline_count[image["Outline"]] += 1
-    tail_count[image["Tail"]] += 1
+    backgroundc_count[image["Cyan Background"]] += 1
+    backgroundm_count[image["Magenta Background"]] += 1
+    backgroundy_count[image["Yellow Background"]] += 1
+    bodyc_count[image["Cyan Body"]] += 1
+    bodym_count[image["Magenta Body"]] += 1
+    bodyy_count[image["Yellow Body"]] += 1
+    outlinec_count[image["Cyan Outline"]] += 1
+    outlinem_count[image["Magenta Outline"]] += 1
+    outliney_count[image["Yellow Outline"]] += 1
 
 
-print(background_count)
-print(back_count)
-print(body_count)
-print(ears_count)
-print(front_count)
-print(head_count)
-print(neck_count)
-print(outline_count)
-print(tail_count)
+print(backgroundc_count)
+print(backgroundm_count)
+print(backgroundy_count)
+print(bodyc_count)
+print(bodym_count)
+print(bodyy_count)
+print(outlinec_count)
+print(outlinem_count)
+print(outliney_count)
 
 
 #Generate Metadata for all Traits
@@ -275,15 +236,15 @@ with open(METADATA_FILE_NAME, 'w') as outfile:
 
 for item in all_images:
 
-    im1 = Image.open(f'./layers/backgrounds/{background_files[item["Background"]]}.png').convert('RGBA')
-    im2 = Image.open(f'./layers/back/{back_files[item["Back Legs"]]}.png').convert('RGBA')
-    im3 = Image.open(f'./layers/body/{body_files[item["Body"]]}.png').convert('RGBA')
-    im4 = Image.open(f'./layers/ears/{ears_files[item["Ears"]]}.png').convert('RGBA')
-    im5 = Image.open(f'./layers/front/{front_files[item["Front Legs"]]}.png').convert('RGBA')
-    im6 = Image.open(f'./layers/head/{head_files[item["Head"]]}.png').convert('RGBA')
-    im7 = Image.open(f'./layers/neck/{neck_files[item["Neck"]]}.png').convert('RGBA')
-    im8 = Image.open(f'./layers/tail/{tail_files[item["Tail"]]}.png').convert('RGBA')
-    im9 = Image.open(f'./layers/outline/{outline_files[item["Outline"]]}.png').convert('RGBA')
+    im1 = Image.open(f'./layers/background c/{background_files[item["Background"]]}.png').convert('RGBA')
+    im2 = Image.open(f'./layers/background m/{back_files[item["Back Legs"]]}.png').convert('RGBA')
+    im3 = Image.open(f'./layers/background y/{body_files[item["Body"]]}.png').convert('RGBA')
+    im4 = Image.open(f'./layers/body c/{ears_files[item["Ears"]]}.png').convert('RGBA')
+    im5 = Image.open(f'./layers/body m/{front_files[item["Front Legs"]]}.png').convert('RGBA')
+    im6 = Image.open(f'./layers/body y/{head_files[item["Head"]]}.png').convert('RGBA')
+    im7 = Image.open(f'./layers/outline c/{neck_files[item["Neck"]]}.png').convert('RGBA')
+    im8 = Image.open(f'./layers/outline m/{tail_files[item["Tail"]]}.png').convert('RGBA')
+    im9 = Image.open(f'./layers/outline y/{outline_files[item["Outline"]]}.png').convert('RGBA')
 
     #Create each composite
     com1 = Image.alpha_composite(im1, im2)
