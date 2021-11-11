@@ -48,67 +48,67 @@ backgroundc_files = {
 }
 
 backgroundm_files = {
-    "None": "cbg1",
-    "A little": "cbg2",
-    "More": "cbg3",
-    "A Lot": "cbg4",
-    "Filled": "cbg5"
+    "None": "mbg1",
+    "A little": "mbg2",
+    "More": "mbg3",
+    "A Lot": "mbg4",
+    "Filled": "mbg5"
 }
 
 backgroundy_files = {
-    "None": "cbg1",
-    "A little": "cbg2",
-    "More": "cbg3",
-    "A Lot": "cbg4",
-    "Filled": "cbg5"
+    "None": "ybg1",
+    "A little": "ybg2",
+    "More": "ybg3",
+    "A Lot": "ybg4",
+    "Filled": "ybg5"
 }
 
 bodyc_files = {
-    "None": "cbg1",
-    "A little": "cbg2",
-    "More": "cbg3",
-    "A Lot": "cbg4",
-    "Filled": "cbg5"
+    "None": "cb1",
+    "A little": "cb2",
+    "More": "cb3",
+    "A Lot": "cb4",
+    "Filled": "cb5"
 }
 
 bodym_files = {
-    "None": "cbg1",
-    "A little": "cbg2",
-    "More": "cbg3",
-    "A Lot": "cbg4",
-    "Filled": "cbg5"
+    "None": "mb1",
+    "A little": "mb2",
+    "More": "mb3",
+    "A Lot": "mb4",
+    "Filled": "mb5"
 }
 
 bodyy_files = {
-    "None": "cbg1",
-    "A little": "cbg2",
-    "More": "cbg3",
-    "A Lot": "cbg4",
-    "Filled": "cbg5"
+    "None": "yb1",
+    "A little": "yb2",
+    "More": "yb3",
+    "A Lot": "yb4",
+    "Filled": "yb5"
 }
 
 outlinec_files = {
-    "None": "cbg1",
-    "A little": "cbg2",
-    "More": "cbg3",
-    "A Lot": "cbg4",
-    "Filled": "cbg5"
+    "None": "co1",
+    "A little": "co2",
+    "More": "co3",
+    "A Lot": "co4",
+    "Filled": "co5"
 }
 
 outlinem_files = {
-    "None": "cbg1",
-    "A little": "cbg2",
-    "More": "cbg3",
-    "A Lot": "cbg4",
-    "Filled": "cbg5"
+    "None": "mo1",
+    "A little": "mo2",
+    "More": "mo3",
+    "A Lot": "mo4",
+    "Filled": "mo5"
 }
 
 outliney_files = {
-    "None": "cbg1",
-    "A little": "cbg2",
-    "More": "cbg3",
-    "A Lot": "cbg4",
-    "Filled": "cbg5"
+    "None": "yo1",
+    "A little": "yo2",
+    "More": "yo3",
+    "A Lot": "yo4",
+    "Filled": "yo5"
 }
 
 #Create a function to generate unique image combinations
@@ -121,9 +121,9 @@ def create_new_image():
     new_image = {} #
 
     # For each trait category, select a random trait based on the weightings 
-    new_image ["Cyan Background"] = random.choices(backgroundcs, backgroundc_weights)[0]
+    new_image ["Cyan Background"] = random.choices(backgroundc, backgroundc_weights)[0]
     new_image ["Magenta Background"] = random.choices(backgroundm, backgroundm_weights)[0]
-    new_image ["Yellow Backgroun"] = random.choices(backgroundy, backgroundy_weights)[0]
+    new_image ["Yellow Background"] = random.choices(backgroundy, backgroundy_weights)[0]
     new_image ["Cyan Body"] = random.choices(bodyc, bodyc_weights)[0]
     new_image ["Magenta Body"] = random.choices(bodym, bodym_weights)[0]
     new_image ["Yellow Body"] = random.choices(bodyy, bodyy_weights)[0]
@@ -236,15 +236,15 @@ with open(METADATA_FILE_NAME, 'w') as outfile:
 
 for item in all_images:
 
-    im1 = Image.open(f'./layers/background c/{background_files[item["Background"]]}.png').convert('RGBA')
-    im2 = Image.open(f'./layers/background m/{back_files[item["Back Legs"]]}.png').convert('RGBA')
-    im3 = Image.open(f'./layers/background y/{body_files[item["Body"]]}.png').convert('RGBA')
-    im4 = Image.open(f'./layers/body c/{ears_files[item["Ears"]]}.png').convert('RGBA')
-    im5 = Image.open(f'./layers/body m/{front_files[item["Front Legs"]]}.png').convert('RGBA')
-    im6 = Image.open(f'./layers/body y/{head_files[item["Head"]]}.png').convert('RGBA')
-    im7 = Image.open(f'./layers/outline c/{neck_files[item["Neck"]]}.png').convert('RGBA')
-    im8 = Image.open(f'./layers/outline m/{tail_files[item["Tail"]]}.png').convert('RGBA')
-    im9 = Image.open(f'./layers/outline y/{outline_files[item["Outline"]]}.png').convert('RGBA')
+    im1 = Image.open(f'./layers/background c/{backgroundc_files[item["Cyan Background"]]}.png').convert('RGBA')
+    im2 = Image.open(f'./layers/background m/{backgroundm_files[item["Magenta Background"]]}.png').convert('RGBA')
+    im3 = Image.open(f'./layers/background y/{backgroundy_files[item["Yellow Background"]]}.png').convert('RGBA')
+    im4 = Image.open(f'./layers/body c/{bodyc_files[item["Cyan Body"]]}.png').convert('RGBA')
+    im5 = Image.open(f'./layers/body m/{bodym_files[item["Magenta Body"]]}.png').convert('RGBA')
+    im6 = Image.open(f'./layers/body y/{bodyy_files[item["Yellow Body"]]}.png').convert('RGBA')
+    im7 = Image.open(f'./layers/outline c/{outlinec_files[item["Cyan Outline"]]}.png').convert('RGBA')
+    im8 = Image.open(f'./layers/outline m/{outlinem_files[item["Magenta Outline"]]}.png').convert('RGBA')
+    im9 = Image.open(f'./layers/outline y/{outliney_files[item["Yellow Outline"]]}.png').convert('RGBA')
 
     #Create each composite
     com1 = Image.alpha_composite(im1, im2)
