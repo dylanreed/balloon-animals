@@ -1,0 +1,43 @@
+{
+    "image": "ADD_IMAGES_BASE_URI_HERE/4.png",
+    "tokenId": 4,
+    "name": "Balloon Animals 4",
+    "attributes": [
+        {
+            "trait_type": "Background",
+            "value": "Three"
+        },
+        {
+            "trait_type": "Back Legs",
+            "value": "Violet"
+        },
+        {
+            "trait_type": "Body",
+            "value": "Red"
+        },
+        {
+            "trait_type": "Ears",
+            "value": "Blue"
+        },
+        {
+            "trait_type": "Front Legs",
+            "value": "Black"
+        },
+        {
+            "trait_type": "Head",
+            "value": "Black"
+        },
+        {
+            "trait_type": "Neck",
+            "value": "Red"
+        },
+        {
+            "trait_type": "Tail",
+            "value": "Indigo"
+        },
+        {
+            "trait_type": "Outline",
+            "value": "Black"
+        }
+    ]
+}

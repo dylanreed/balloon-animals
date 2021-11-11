@@ -8,8 +8,8 @@ import json
 # Each image is made up a series of traits
 # The weightings for each trait drive the rarity and add up to 100%
 
-backgrounds = ["Blue", "Dark Blue", "Green", "Magenta", "Orange", "Purple", "White", "Yellow Green"] 
-background_weights = [12, 12, 12, 12, 12, 12, 12, 16]
+backgrounds = ["Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine", "Ten", "Eleven", "Twelve", "Thirteen", "Fourteen", "Fifteen", "Sixteen", "Seventeen", "Eighteen", "Nineteen", "Twenty", "Twenty-one"] 
+background_weights = [5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5]
 
 body = ["Black", "Red", "Orange", "Yellow", "Green", "Blue", "Indigo", "Violet", "White"]
 body_weights = [11, 11, 11, 11, 11, 11, 11, 11, 12]
@@ -40,14 +40,26 @@ outline_weights = [100]
 # Add more shapes and colours as you wish
 
 background_files = {
-    "Blue": "bg_blue",
-    "Dark Blue": "bg_dark_blue",
-    "Green": "bg_green",
-    "Magenta": "bg_magenta",
-    "Orange": "bg_orange",
-    "Purple": "bg_purple",
-    "White": "bg_white",
-    "Yellow Green": "bg_yellow_green"
+    "Two": "bg2",
+    "Three": "bg3",
+    "Four": "bg4",
+    "Five": "bg5",
+    "Six": "bg6",
+    "Seven": "bg7",
+    "Eight": "bg8",
+    "Nine": "bg9",
+    "Ten": "bg10",
+    "Eleven": "bg11",
+    "Twelve": "bg12",
+    "Thirteen": "bg13",
+    "Fourteen": "bg14",
+    "Fifteen": "bg15",
+    "Sixteen": "bg16",
+    "Seventeen": "bg17",
+    "Eighteen": "bg18",
+    "Nineteen": "bg19",
+    "Twenty": "bg20",
+    "Twenty-one": "bg21"
 }
 
 back_files = {
@@ -139,7 +151,7 @@ outline_files = {
 }
 
 #Create a function to generate unique image combinations
-TOTAL_IMAGES = 67 # Number of random unique images we want to generate ( 2 x 2 x 2 = 8)
+TOTAL_IMAGES = 10 # Number of random unique images we want to generate ( 2 x 2 x 2 = 8)
 
 all_images = [] 
 

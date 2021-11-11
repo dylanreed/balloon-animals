@@ -1,0 +1,43 @@
+{
+    "image": "ADD_IMAGES_BASE_URI_HERE/6.png",
+    "tokenId": 6,
+    "name": "Balloon Animals 6",
+    "attributes": [
+        {
+            "trait_type": "Background",
+            "value": "Twenty-one"
+        },
+        {
+            "trait_type": "Back Legs",
+            "value": "Orange"
+        },
+        {
+            "trait_type": "Body",
+            "value": "White"
+        },
+        {
+            "trait_type": "Ears",
+            "value": "Red"
+        },
+        {
+            "trait_type": "Front Legs",
+            "value": "Blue"
+        },
+        {
+            "trait_type": "Head",
+            "value": "Violet"
+        },
+        {
+            "trait_type": "Neck",
+            "value": "Blue"
+        },
+        {
+            "trait_type": "Tail",
+            "value": "Orange"
+        },
+        {
+            "trait_type": "Outline",
+            "value": "Black"
+        }
+    ]
+}
